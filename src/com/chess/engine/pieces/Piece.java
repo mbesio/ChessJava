@@ -13,9 +13,14 @@ public abstract class Piece {
     //Piece will be either white or black - will use an enum for this
     protected final Alliance pieceAlliance;
 
+
     Piece(final int piecePosition, final Alliance pieceAlliance){
-        this. piecePosition = piecePosition;
+        this.piecePosition = piecePosition;
         this.pieceAlliance = pieceAlliance;
+    }
+
+    public Alliance getPieceAlliance() {
+        return this.pieceAlliance;
     }
 
     //method that is responsible of calculating the legal moves of a piece
