@@ -17,7 +17,7 @@ public abstract class Tile {
 
     private static Map<Integer, EmptyTile> createAllPossibleEmptyTiles() {
         final Map<Integer, EmptyTile> emptyTileMap = new HashMap<>();
-        for(int i=0; i<64; i++) {
+        for(int i=0; i<BoardUtils.NUM_TILES; i++) {
             emptyTileMap.put(i, new EmptyTile(i));
         }
         //A map is a container, an immutable map cannot change it once it has been created. This is from Google's Guava library
@@ -32,7 +32,7 @@ public abstract class Tile {
 
     //Constructor
 
-    private Tile(int tileCoordinate){
+    private Tile(final int tileCoordinate){
         this.tileCoordinate = tileCoordinate;
     }
 
